@@ -1,0 +1,162 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "Montserrat", "Fraunces";
+}
+
+body {
+  /* color: #868e96; */
+  color: hsl(228, 12%, 48%);
+}
+
+.main-box {
+  width: 100vw;
+  height: 100vh;
+  background-color: hsl(30, 38%, 92%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: auto;
+}
+
+.card {
+  width: 55rem;
+  height: 43rem;
+  background-color: hsl(0, 0%, 100%);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+}
+.img-section {
+  background-image: linear-gradient(
+      hsla(0, 2%, 48%, 0.074),
+      hsla(0, 1%, 26%, 0.232)
+    ),
+    url(images/image-product-desktop.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+}
+.info-section {
+  padding: 3rem 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.tag {
+  text-transform: uppercase;
+  letter-spacing: 0.3rem;
+  font-weight: 500;
+  font-size: 1.1rem;
+}
+
+.heading {
+  font-size: 3rem;
+  font-family: "Fraunces";
+  color: hsl(212, 21%, 14%);
+  letter-spacing: -0.05rem;
+}
+
+.info {
+  line-height: 1.5;
+  font-size: 1.3rem;
+}
+
+.price {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.big-price {
+  font-family: Fraunces;
+  font-size: 3rem;
+  color: hsl(158, 36%, 37%);
+}
+
+.small-price {
+  font-size: 1.1rem;
+  text-decoration: line-through;
+}
+
+.btn,
+.btn:link,
+.btn:visited {
+  width: 100%;
+  background-color: hsl(158, 36%, 37%);
+  color: hsl(0, 0%, 100%);
+  padding: 1.5rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  font-family: inherit;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  gap: 1rem;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-weight: 700;
+}
+.btn:hover,
+.btn:active {
+  background-color: hsl(158, 36%, 25%);
+}
+
+.btn-icon {
+  text-align: center;
+  display: inline-block;
+  scale: 0.8;
+}
+
+@media (max-width: 24em) {
+  html {
+    font-size: 50%;
+  }
+  .main-box {
+    padding: 3rem 3rem;
+  }
+
+  .card {
+    height: 70rem;
+    /* height: 100%; */
+    /* margin: 3rem 3rem; */
+    background-color: hsl(0, 0%, 100%);
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+
+  .img-section {
+    display: flex;
+    background-image: linear-gradient(
+        hsla(0, 2%, 48%, 0.074),
+        hsla(0, 1%, 26%, 0.232)
+      ),
+      url(images/image-product-mobile.jpg);
+    background-size: cover;
+    background-position: center;
+  }
+
+  .info-section {
+    padding: 3rem 3rem;
+    display: flex;
+    flex-direction: column;
+    /* gap: 0; */
+  }
+}
